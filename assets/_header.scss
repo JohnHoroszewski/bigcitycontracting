@@ -1,0 +1,97 @@
+.site-header {
+    background-color: $accent;
+    box-shadow: $lshadow;
+    padding: 10px 0;
+}
+
+.top-bar {
+    background-color: $darkest;
+    color: $lightest;
+    overflow: hidden;
+    padding: 5px 0;
+    position: relative;
+    text-align: center;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+
+    a {
+        color: $lightest;
+        text-decoration: none;
+    }
+}
+
+.contact-links,
+.top-social {
+    background-color: lighten( $darkest, 15% );
+    font-size: 13px;
+    max-width: 300px;
+    position: absolute;
+    top: 0;
+
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+
+    a {
+        display: inline-block;
+        height: 34px;
+        line-height: 37px;
+        margin: 0 5px;
+    }
+
+    i {
+        font-size: 16px;
+        margin: 0 5px;
+    }
+}
+
+.contact-links {
+   z-index: 999;
+
+   i {
+       color: $accent;
+
+       &.fa-user {
+           color: $lightest;
+       }
+   }
+}
+
+.top-social {
+    z-index: 998;
+}
+
+.contact-links.opened,
+.top-social.opened {
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+#top-contact-toggle {
+    float: right;
+}
+
+#top-social-toggle {
+    float: left;
+}
+
+.builder-link {
+
+    a {
+        position: relative;
+        text-transform: uppercase;
+    }
+}
+
+.site-description {
+    display: none;
+    text-indent: -999em;
+}
