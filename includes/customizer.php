@@ -25,11 +25,11 @@ function bigCity_master_customizer( $wp_customize ) {
 	    'priority'    => 30,
 	    'description' => 'Here you can set default page banners for the different page template types',
 	) );
-	// Privacy Policy
-	$wp_customize->add_section( 'bigCity_privacy_section' , array(
-	    'title'       => __( 'Privacy Policy', 'bigCity' ),
+	// Assorted Site Links
+	$wp_customize->add_section( 'bigCity_assorted_links_section' , array(
+	    'title'       => __( 'Assorted Site Links', 'bigCity' ),
 	    'priority'    => 30,
-	    'description' => 'Add your Privacy Policy link here',
+	    'description' => 'Add your Assorted Site Links here',
 	) );
 	// Remove default sections
 	$wp_customize->remove_section( 'colors' );
@@ -64,8 +64,10 @@ function bigCity_master_customizer( $wp_customize ) {
     $wp_customize->add_setting( 'bigCity_social_vimeo_link', array( 'default' => __( '' ), 'bigCity' ) );
     $wp_customize->add_setting( 'bigCity_social_instagram_link', array( 'default' => __( '' ), 'bigCity' ) );
 	$wp_customize->add_setting( 'bigCity_social_pinterest_link', array( 'default' => __( '' ), 'bigCity' ) );
-	// Privacy Policy
-	$wp_customize->add_setting( 'bigCity_privacy_policy' );
+	// Assorted Site Links
+	$wp_customize->add_setting( 'bigCity_assorted_links' );
+	$wp_customize->add_setting( 'bigCity_site_map', array( 'default' => __( '' ), 'bigCity' ) );
+	$wp_customize->add_setting( 'bigCity_privacy_policy', array( 'default' => __( '' ), 'bigCity' ) );
 	// Page Banners
     $wp_customize->add_setting( 'bigCity_page_banner_section' );
     $wp_customize->add_setting( 'bigCity_page_gallery', array( 'default' => __( '' ), 'bigCity' ) );
@@ -264,10 +266,15 @@ function bigCity_master_customizer( $wp_customize ) {
 	    'section'  => 'bigCity_page_banner_section',
 	    'settings' => 'bigCity_post_single',
 	) ) );
-	// Privacy Policy
+	// Assorted Site Links
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'bigCity_site_map', array(
+	    'label'    => __( 'Site Map Link', 'bigCity' ),
+	    'section'  => 'bigCity_assorted_links_section',
+	    'settings' => 'bigCity_site_map',
+	) ) );
 	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'bigCity_privacy_policy', array(
 	    'label'    => __( 'Privacy Policy Link', 'bigCity' ),
-	    'section'  => 'bigCity_privacy_section',
+	    'section'  => 'bigCity_assorted_links_section',
 	    'settings' => 'bigCity_privacy_policy',
 	) ) );
 }

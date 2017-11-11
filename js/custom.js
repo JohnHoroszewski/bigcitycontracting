@@ -7,12 +7,12 @@ jQuery( window ).ready( function( $ )
     $clWidth = $contactLinks.outerWidth(),
     $tct = $( '#top-contact-toggle' ),
     $tctWidth = $tct.outerWidth(),
-    $clToggled = $clWidth - $tctWidth - 3,
+    $clToggled = $clWidth - $tctWidth - 7,
     $topSocial = $( '.top-social' ),
     $tsWidth = $topSocial.outerWidth(),
     $tst = $( '#top-social-toggle' ),
     $tstWidth = $tst.width(),
-    $tsToggled = $tsWidth - $tstWidth - 3,
+    $tsToggled = $tsWidth - $tstWidth - 9,
     $winWidth = $( window ).outerWidth();
 
     if ( $winWidth < 768 )
@@ -44,4 +44,18 @@ jQuery( window ).ready( function( $ )
             }
         });
     }
+
+    	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
+	$('a[href*="#"]:not([href="#"])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html, body').animate({
+				scrollTop: target.offset().top
+			}, 1000);
+				return false;
+			}
+		}
+	});
 });

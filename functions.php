@@ -98,22 +98,64 @@ function big_city_contracting_content_width() {
 add_action( 'after_setup_theme', 'big_city_contracting_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register widget areas.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function big_city_contracting_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'big-city-contracting' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'big-city-contracting' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+
+function bigCity_sidebars() {
+	
+	$args = array(
+		'id'            => 'footer_col1',
+		'class'         => 'footer-col',
+		'name'          => __( 'Footer Column 1', 'text_domain' ),
+		'description'   => __( 'First Column in the Footer Area', 'text_domain' ),
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		'before_widget' => ' ',
+		'after_widget'  => ' ',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'footer_col2',
+		'class'         => 'footer-col',
+		'name'          => __( 'Footer Column 2', 'text_domain' ),
+		'description'   => __( 'Second Column in the Footer Area', 'text_domain' ),
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		'before_widget' => ' ',
+		'after_widget'  => ' ',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'footer_col3',
+		'class'         => 'footer-col',
+		'name'          => __( 'Footer Column 3', 'text_domain' ),
+		'description'   => __( 'Third Column in the Footer Area', 'text_domain' ),
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		'before_widget' => ' ',
+		'after_widget'  => ' ',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'footer_col4',
+		'class'         => 'footer-col',
+		'name'          => __( 'Footer Column 4', 'text_domain' ),
+		'description'   => __( 'Fourth Column in the Footer Area', 'text_domain' ),
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+		'before_widget' => ' ',
+		'after_widget'  => ' ',
+	);
+	register_sidebar( $args );
+
 }
-add_action( 'widgets_init', 'big_city_contracting_widgets_init' );
+add_action( 'widgets_init', 'bigCity_sidebars' );
+
 
 /**
  * Enqueue scripts and styles.

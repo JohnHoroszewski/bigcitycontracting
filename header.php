@@ -21,7 +21,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'sfooter' ); ?>>
+<body id="top" <?php body_class( 'sfooter' ); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'big-city-contracting' ); ?></a>
 	<div class="top-bar">
@@ -32,7 +32,7 @@
 				<a id="top-contact-toggle" href="#"><i class="fa fa-user"></i></a>
 			</div>
 			<div class="builder-link">
-				<a href="#">Builders Package <i class="fa fa-chevron-right"></i></a>
+				<a href="#">Builders Package <i class="fa fa-caret-right"></i></a>
 			</div>
 			<div class="top-social social-media">
 				<a href="#" id="top-social-toggle"><i class="fa fa-share-alt"></i></a>
