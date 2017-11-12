@@ -9,17 +9,21 @@
     color: $lightest;
     overflow: hidden;
     padding: 5px 0;
-    position: relative;
     text-align: center;
     
-    -webkit-transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -ms-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-    transition: all 0.35s ease-in-out;
+    .constrain {
+        position: relative;
+    }
 
     a {
         color: $lightest;
+    }
+}
+
+.builder-link {
+
+    a {
+        margin: 3px 0 0 0;
     }
 }
 
@@ -29,7 +33,7 @@
     font-size: 13px;
     max-width: 300px;
     position: absolute;
-    top: 0;
+    top: -5px;
 
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;

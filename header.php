@@ -41,8 +41,7 @@
 		</div>
 	</div>
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<div class="constrain flexed">
+		<div class="constrain flexed">
 
 			<div class="site-branding">
 				<a class="logo-full" href="/"><img src="<?php echo get_theme_mod( 'bigCity_logo' ); ?>" alt=""></a>
@@ -63,7 +62,7 @@
 					) );
 				?>
 			</nav><!-- #site-navigation -->
-		</div>
+		</div><!-- .constrain flexed -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
