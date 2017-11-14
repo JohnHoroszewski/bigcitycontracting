@@ -10,9 +10,6 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
 	<footer id="colophon" class="top-footer">
 		<div class="constrain flexed">
 

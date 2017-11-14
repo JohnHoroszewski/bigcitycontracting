@@ -64,5 +64,3 @@
 			</nav><!-- #site-navigation -->
 		</div><!-- .constrain flexed -->
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

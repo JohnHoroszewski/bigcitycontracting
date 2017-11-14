@@ -1,0 +1,120 @@
+section {
+    padding: 30px 0;
+}
+
+.hero {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $lightest;
+    position: relative;
+    text-align: center;
+}
+
+.hero-bold-text {
+    font-family: $heading;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.25px;
+    text-transform: uppercase;
+}
+
+.hero-light-text {
+    font-family: $heading;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+}
+
+.services,
+.about {
+    text-align: center;
+
+    h3 {
+        color: $accent;
+        text-transform: uppercase;
+    }
+
+    a {
+        color: $accent;
+        font-weight: 500;
+    }
+}
+
+.services {
+
+    .flexed {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+}
+
+.service-block {
+    margin: 0 0 20px 0;
+
+    &:last-of-type {
+        margin: 0;
+    }
+}
+
+.about {
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $lightest;
+}
+
+.hp-form {
+    background-color: $darkest;
+
+    h3 {
+        color: $lightest;
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .flexed {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    span {
+        display: block;
+        margin: 0 0 15px 0;
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.syp-comments {
+    position: relative;
+
+    input[type=submit] {
+        background-color: $accent;
+        bottom: 15px;
+        box-shadow: $lshadow;
+        color: $lightest;
+        right: 10px;
+        padding: 10px 20px;
+        position: absolute;
+        text-transform: uppercase;
+    }
+
+    .ajax-loader {
+        left: 10px;
+        position: absolute;
+        bottom: 20px;
+    }
+}

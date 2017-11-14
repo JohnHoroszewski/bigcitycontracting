@@ -13,6 +13,7 @@ jQuery( window ).ready( function( $ )
     $tst = $( '#top-social-toggle' ),
     $tstWidth = $tst.width(),
     $tsToggled = $tsWidth - $tstWidth - 9,
+    $about = $( '.about' ),
     $winWidth = $( window ).outerWidth();
 
     if ( $winWidth < 768 )
@@ -45,7 +46,15 @@ jQuery( window ).ready( function( $ )
         });
     }
 
-    	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
+    // Set background image position for about section
+    if ( $winWidth > 767 ) {
+        $bgPosition = $winWidth / 2 + 'px' + ' center';
+
+        $about.css( 'backgroundPosition', $winWidth / 2 + 'px' + ' center' );
+    }
+
+
+    // Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*
 	$('a[href*="#"]:not([href="#"])').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 			var target = $(this.hash);
