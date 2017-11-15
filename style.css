@@ -351,8 +351,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+h1 {
+  font-weight: 500;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.35);
+  text-transform: uppercase;
+}
+
 h3 {
+  color: #a81e1e;
+  font-weight: 500;
   margin: 0 0 .35em 0;
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------
@@ -945,6 +954,64 @@ section {
   bottom: 20px;
 }
 
+.page-template-general .banner-image {
+  background-position-y: 0px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 0;
+}
+.page-template-general .page-content img {
+  margin: 0 0 10px 0;
+}
+
+.page-heading {
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+.content-wrapper {
+  background-color: white;
+  overflow: hidden;
+}
+
+.recent-projects {
+  background-color: #e8e8e8;
+  padding: 30px 0 0 0;
+  text-align: center;
+}
+.recent-projects .flexed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.project-image-block {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  min-height: 225px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.project-image-block .project-image-overlay {
+  background-color: rgba(0, 0, 0, 0.35);
+  height: 100%;
+  left: 0;
+  padding: 90px 0 0 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1180,6 +1247,11 @@ a.cta-btn.dark-btn,
 ## Media Queries
 --------------------------------------------------------------*/
 @media only screen and (min-width: 568px) {
+  h1 {
+    font-size: 3.5em;
+    line-height: 1em;
+  }
+
   .hero {
     padding: 50px 0;
   }
@@ -1187,8 +1259,19 @@ a.cta-btn.dark-btn,
   .hero-bold-text {
     font-size: 38px;
   }
+
+  .project-image-block {
+    min-height: 300px;
+  }
+  .project-image-block .project-image-overlay {
+    padding: 130px 0 0 0;
+  }
 }
 @media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 4.25em;
+  }
+
   section {
     padding: 40px 0;
   }
@@ -1304,6 +1387,32 @@ a.cta-btn.dark-btn,
     text-align: left;
   }
 
+  .page-template-general .page-content img {
+    width: 50%;
+  }
+  .page-template-general .page-content img.alignright {
+    margin: 0 0 15px 20px;
+  }
+  .page-template-general .page-content img.alignleft {
+    margin: 0 20px 15px 0;
+  }
+
+  .recent-projects .flexed {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .project-image-block {
+    width: 50%;
+  }
+  .project-image-block .project-image-overlay {
+    padding: 125px 0 0 0;
+  }
+
   .top-footer .flexed,
   .bottom-footer .flexed {
     display: flex;
@@ -1393,6 +1502,20 @@ a.cta-btn.dark-btn,
     background-size: 82.5%;
   }
 
+  .page-template-general .banner-image {
+    padding: 40px 0 60px 0;
+  }
+
+  .project-image-block {
+    width: 25%;
+  }
+  .project-image-block .project-image-overlay {
+    padding: 115px 0 0 0;
+  }
+  .project-image-block .project-image-overlay a {
+    margin: 0 0 10px 0;
+  }
+
   .footer-col {
     margin: 0;
     width: 22.5%;
@@ -1405,5 +1528,30 @@ a.cta-btn.dark-btn,
 
   .about {
     background-size: 65%;
+  }
+
+  .project-image-block .project-image-overlay {
+    bottom: -100%;
+    padding: 125px 0 0 0;
+    top: initial;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+  }
+  .project-image-block:hover > .project-image-overlay {
+    bottom: 0;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+  }
+
+  .content-wrapper {
+    border-top: 3px solid #a81e1e;
+    padding: 30px 10px 0 10px;
+    margin: -85px 0 0 0;
   }
 }

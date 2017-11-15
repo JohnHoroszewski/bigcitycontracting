@@ -1,5 +1,11 @@
 @media only screen and ( min-width: 568px ) {
 
+    h1 {
+        font-size: 3.5em;
+        line-height: 1em;
+    }
+
+    // Homepage
     .hero {
         padding: 50px 0;
     }
@@ -7,9 +13,22 @@
     .hero-bold-text {
         font-size: 38px;
     }
+
+    // General Pages
+    .project-image-block {
+        min-height: 300px;
+
+        .project-image-overlay {
+            padding: 130px 0 0 0;
+        }
+    }
 }
 
 @media only screen and ( min-width: 768px ) {
+
+    h1 {
+        font-size: 4.25em;
+    }
 
     // Classes
     section {
@@ -147,6 +166,45 @@
         }
     }
 
+    // General Pages
+    .page-template-general {
+
+        .page-content {
+
+            img {
+                width: 50%;
+            }
+
+            img.alignright {
+                margin: 0 0 15px 20px;
+            }
+
+            img.alignleft {
+                margin: 0 20px 15px 0;
+            }
+        }
+    }
+
+    .recent-projects {
+
+        .flexed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        }
+    }
+
+    .project-image-block {
+        width: 50%;
+
+        .project-image-overlay {
+            padding: 125px 0 0 0;
+        }
+    }
+
     // Footer
     .top-footer,
     .bottom-footer {
@@ -258,6 +316,26 @@
         background-size: 82.5%
     }
 
+    // General Pages
+    .page-template-general {
+
+        .banner-image {
+            padding: 40px 0 60px 0;
+        }
+    }
+
+    .project-image-block {
+        width: 25%;
+
+        .project-image-overlay {
+            padding: 115px 0 0 0;
+
+            a {
+                margin: 0 0 10px 0;
+            }
+        }
+    }
+
     // Footer
     .footer-col {
         margin: 0;
@@ -267,12 +345,44 @@
 
 @media only screen and ( min-width: 1200px ) {
     
-        // Homepage
-        .hero {
-            padding: 200px ;
+    // Homepage
+    .hero {
+        padding: 200px ;
+    }
+
+    .about {
+        background-size: 65%
+    }
+
+    // General Pages
+    .project-image-block {
+
+        .project-image-overlay {
+            bottom: -100%;
+            padding: 125px 0 0 0;          
+            top: initial;
+
+            -webkit-transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -ms-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
         }
 
-        .about {
-            background-size: 65%
+        &:hover > .project-image-overlay {
+            bottom: 0;
+
+            -webkit-transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -ms-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
         }
     }
+
+    .content-wrapper {
+        border-top: 3px solid $accent;
+        padding: 30px 10px 0 10px;
+        margin: -85px 0 0 0;
+    }
+}

@@ -23,7 +23,7 @@ function bigCity_master_customizer( $wp_customize ) {
 	$wp_customize->add_section( 'bigCity_page_banner_section' , array(
 	    'title'       => __( 'Default Page Banners', 'bigCity' ),
 	    'priority'    => 30,
-	    'description' => 'Here you can set default page banners for the different page template types',
+	    'description' => 'Here you can set default page banners for the different page template types. For best results, make sure image is at least 1920x1000px',
 	) );
 	// Assorted Site Links
 	$wp_customize->add_section( 'bigCity_assorted_links_section' , array(

@@ -1,6 +1,5 @@
 jQuery( window ).ready( function( $ )
 {
-    // Custom scripts for Big City Contracting 11-11-17 JH
 
     // Variables
     $contactLinks = $( '.contact-links' ),
@@ -52,6 +51,17 @@ jQuery( window ).ready( function( $ )
 
         $about.css( 'backgroundPosition', $winWidth / 2 + 'px' + ' center' );
     }
+
+    // Parallax effect on elements with .parallax-image class
+    $( window ).scroll( function(){
+        
+        var $headerImage = $( '.parallax-image' ),
+            wScroll = $( this ).scrollTop();
+
+        $headerImage.css({
+            'background-position-y' : -wScroll /8,
+        });
+    });
 
 
     // Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*

@@ -17,7 +17,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<script src="https://use.fontawesome.com/822d311cfa.js"></script>
-
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.bigcitycontracting.dev/wp-content/themes/big-city-contracting/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" href="http://www.bigcitycontracting.dev/wp-content/themes/big-city-contracting/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
 	<?php wp_head(); ?>
 </head>
 
