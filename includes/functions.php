@@ -33,3 +33,13 @@ function social_media_list(){
 		echo '<a class="social-icon pinterest" href="' . get_theme_mod( 'bigCity_social_pinterest_link' ) . '"><i class="fa fa-pinterest"></i></a>';
 	endif;
 }
+
+/**
+* This example returns ten words, then [...]
+* Manual excerpts will override this
+*/
+
+function cf_custom_excerpt_length( $length ) {
+    return 34;
+}
+add_filter( 'excerpt_length', 'cf_custom_excerpt_length', 999 );

@@ -32,39 +32,40 @@
         <div class="constrain">
             <div class="content-wrapper">
                 <?php the_content(); ?>
-            </div>
-            <aside class="contact">
+           
+                <aside class="contact">
 
-                <div class="contact-snippet">
-                    <?php if ( get_field( 'contact_snippet' ) ) {
-                        the_field( 'contact_snippet' );
-                    } ?>
-                </div>      
+                    <div class="contact-snippet">
+                        <?php if ( get_field( 'contact_snippet' ) ) {
+                            the_field( 'contact_snippet' );
+                        } ?>
+                    </div>      
 
-                <?php if ( get_field( 'default_info' )  == 'yes' ) : ?>
-                    <div class="contact-block">
-                        <h3>Meet Us</h3>
-                        <?php echo get_theme_mod( 'bigCity_company_street' ); ?><br />
-                        <?php echo get_theme_mod( 'bigCity_company_city' ); ?>, <?php echo get_theme_mod( 'bigCity_company_state' ); ?> <?php echo get_theme_mod( 'bigCity_company_zip' ); ?>
+                    <?php if ( get_field( 'default_info' )  == 'yes' ) : ?>
+                        <div class="contact-block">
+                            <h3>Meet Us</h3>
+                            <?php echo get_theme_mod( 'bigCity_company_street' ); ?><br />
+                            <?php echo get_theme_mod( 'bigCity_company_city' ); ?>, <?php echo get_theme_mod( 'bigCity_company_state' ); ?> <?php echo get_theme_mod( 'bigCity_company_zip' ); ?>
 
-                        <h3>Email Us</h3>
-                        <a href="mailto:<?php echo get_theme_mod( 'bigCity_company_email' ); ?>"><?php echo get_theme_mod( 'bigCity_company_email' ); ?></a>
+                            <h3>Email Us</h3>
+                            <a href="mailto:<?php echo get_theme_mod( 'bigCity_company_email' ); ?>"><?php echo get_theme_mod( 'bigCity_company_email' ); ?></a>
 
-                        <h3>Call Us</h3>
-                        <a href="tel:<?php echo get_theme_mod( 'bigCity_company_phone' ); ?>"><?php echo get_theme_mod( 'bigCity_company_phone' ); ?></a>
-                    </div>
+                            <h3>Call Us</h3>
+                            <a href="tel:<?php echo get_theme_mod( 'bigCity_company_phone' ); ?>"><?php echo get_theme_mod( 'bigCity_company_phone' ); ?></a>
+                        </div>
 
-                <?php elseif ( get_field( 'default_info' )  == 'no' ) : ?>
+                    <?php elseif ( get_field( 'default_info' )  == 'no' ) : ?>
 
-                    <div class="contact-block">
-                        <?php the_field( 'custom_sidebar_information' ); ?>
-                    </div>
+                        <div class="contact-block">
+                            <?php the_field( 'custom_sidebar_information' ); ?>
+                        </div>
 
-                <?php else : ?>
+                    <?php else : ?>
 
-                <?php endif; ?>
+                    <?php endif; ?>
 
-            </aside>    
+                </aside>
+            </div> 
         </div>
     </section>
  

@@ -31,6 +31,12 @@ function bigCity_master_customizer( $wp_customize ) {
 	    'priority'    => 30,
 	    'description' => 'Add your Assorted Site Links here',
 	) );
+	// Blog Options
+	$wp_customize->add_section( 'bigCity_blog_options_section' , array(
+		'title'       => __( 'Blog Options', 'bigCity' ),
+		'priority'    => 30,
+		'description' => 'Options for your blog posts page and single post pages',
+	) );
 	// Remove default sections
 	$wp_customize->remove_section( 'colors' );
 	$wp_customize->remove_section( 'header_image' );
@@ -74,7 +80,10 @@ function bigCity_master_customizer( $wp_customize ) {
 	$wp_customize->add_setting( 'bigCity_page_contact', array( 'default' => __( '' ), 'bigCity' ) );
     $wp_customize->add_setting( 'bigCity_page_general', array( 'default' => __( '' ), 'bigCity' ) );
     $wp_customize->add_setting( 'bigCity_posts_blog', array( 'default' => __( '' ), 'bigCity' ) );
-    $wp_customize->add_setting( 'bigCity_post_single', array( 'default' => __( '' ), 'bigCity' ) );
+	$wp_customize->add_setting( 'bigCity_post_single', array( 'default' => __( '' ), 'bigCity' ) );
+	// Blog Options
+	$wp_customize->add_setting( 'bigCity_blog_options_section' );
+	$wp_customize->add_setting( 'bigCity_blog_quote', array( 'default' => __( '' ), 'bigCity' ) );
 	// Customizer Controls
 	// Company Logo
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'bigCity_logo', array(
@@ -276,6 +285,13 @@ function bigCity_master_customizer( $wp_customize ) {
 	    'label'    => __( 'Privacy Policy Link', 'bigCity' ),
 	    'section'  => 'bigCity_assorted_links_section',
 	    'settings' => 'bigCity_privacy_policy',
+	) ) );
+	// Blog Options
+	$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'bigCity_blog_quote', array(
+	    'label'    => __( 'Blog Quote', 'bigCity' ),
+	    'section'  => 'bigCity_blog_options_section',
+		'settings' => 'bigCity_blog_quote',
+		'type'	   => 'textarea'
 	) ) );
 }
 add_action( 'customize_register', 'bigCity_master_customizer' );

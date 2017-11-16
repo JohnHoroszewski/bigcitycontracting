@@ -41,7 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400,600,700,900");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:100,400,600,700,900");
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -954,16 +954,15 @@ section {
   bottom: 20px;
 }
 
-.page-template-general .banner-image,
-.page-template-contact .banner-image {
+.banner-image {
   background-position-y: 0px;
   background-position-x: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px 0;
 }
-.page-template-general .page-content img,
-.page-template-contact .page-content img {
+
+.page-content img {
   margin: 0 0 10px 0;
 }
 
@@ -1028,6 +1027,40 @@ section {
 }
 .page-template-contact .contact-snippet {
   font-weight: 500;
+}
+
+.blog-quote {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  margin: 0 auto 30px auto;
+  max-width: 735px;
+  text-align: center;
+}
+
+.blog-block h2 {
+  font-size: 26px;
+  margin: 0 0 10px 0;
+}
+.blog-block h2 a {
+  color: #232323;
+  font-weight: 300;
+}
+
+.index-date {
+  color: #a81e1e;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.single-post .content-area {
+  padding: 30px 0;
+}
+.single-post h1 {
+  font-size: 1.5em;
+  margin: 0 0 20px 0;
+  text-shadow: none;
 }
 
 /*--------------------------------------------------------------
@@ -1454,6 +1487,32 @@ a.cta-btn.dark-btn,
     width: 49%;
   }
 
+  .blog .flexed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .blog article .flexed {
+    margin: 0 0 30px 0;
+  }
+  .blog .blog-block {
+    width: 55%;
+  }
+  .blog .featured-image {
+    width: 40%;
+  }
+
+  .blog-quote {
+    font-size: 20px;
+  }
+
   .top-footer .flexed,
   .bottom-footer .flexed {
     display: flex;
@@ -1530,7 +1589,14 @@ a.cta-btn.dark-btn,
     width: 50%;
   }
 
-  .page-template-contact .page-content .constrain {
+  .blog .blog-block {
+    width: 60%;
+  }
+  .blog .featured-image {
+    width: 32.5%;
+  }
+
+  .page-template-contact .content-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1542,7 +1608,7 @@ a.cta-btn.dark-btn,
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
-  .page-template-contact .content-wrapper {
+  .page-template-contact .wpcf7 {
     width: 64%;
   }
   .page-template-contact .syp-comments {
@@ -1568,7 +1634,7 @@ a.cta-btn.dark-btn,
     background-size: 82.5%;
   }
 
-  .page-template-general .banner-image {
+  .banner-image {
     padding: 40px 0 60px 0;
   }
 
@@ -1580,6 +1646,10 @@ a.cta-btn.dark-btn,
   }
   .project-image-block .project-image-overlay a {
     margin: 0 0 10px 0;
+  }
+
+  .blog-quote {
+    font-size: 24px;
   }
 
   .footer-col {
@@ -1623,5 +1693,12 @@ a.cta-btn.dark-btn,
 
   .page-template-contact .banner-image {
     padding: 30px 0 60px 0;
+  }
+
+  .blog .blog-block {
+    width: 62.5%;
+  }
+  .blog .featured-image {
+    width: 30%;
   }
 }
