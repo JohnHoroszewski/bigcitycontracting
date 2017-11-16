@@ -121,7 +121,8 @@ section {
 }
 
 // General Pages
-.page-template-general {
+.page-template-general,
+.page-template-contact {
 
     .banner-image {
         background-position-y: 0px;
@@ -185,5 +186,28 @@ section {
         text-align: center;
         top: 0;
         width: 100%;
+    }
+}
+
+// Contact Page
+.page-template-contact {
+    
+    input,
+    select,
+    textarea {
+        background-color: $ltgray;
+        margin: 0 0 10px 0;
+    }
+
+    aside.contact {
+        text-align: center;
+
+        h3 {
+            margin: 20px 0 0 0;
+        }
+    }
+
+    .contact-snippet {
+        font-weight: 500;
     }
 }

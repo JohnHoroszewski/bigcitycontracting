@@ -514,15 +514,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: $accent;
 }
 
 a:visited {
-	color: purple;
+	color: darken( $accent, 30% );
 }
 
 a:hover, a:focus, a:active {
-	color: midnightblue;
+	color: $darkest;
 }
 
 a:focus {
