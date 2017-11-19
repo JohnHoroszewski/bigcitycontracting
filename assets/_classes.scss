@@ -32,3 +32,11 @@ a.cta-btn,
     font-weight: 500;
     text-transform: uppercase;
 }
+
+.gallery-item {
+
+    figcaption {
+        margin: 0 auto;
+        max-width: 230px;
+    }
+}

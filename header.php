@@ -34,7 +34,7 @@
 				<a id="top-contact-toggle" href="#"><i class="fa fa-user"></i></a>
 			</div>
 			<div class="builder-link">
-				<a href="#">Builders Package <i class="fa fa-caret-right"></i></a>
+				<a href="/builders-package/">Builders Package <i class="fa fa-caret-right"></i></a>
 			</div>
 			<div class="top-social social-media">
 				<a href="#" id="top-social-toggle"><i class="fa fa-share-alt"></i></a>

@@ -209,12 +209,13 @@ section {
 }
 
 // Blog Pages
-.blog-quote {
+.blog-quote,
+.page-quote {
     font-size: 18px;
     font-style: italic;
     font-weight: 500;
     margin: 0 auto 30px auto;
-    max-width: 735px;
+    max-width: 960px;
     text-align: center;
 }
 

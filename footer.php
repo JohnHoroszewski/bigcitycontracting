@@ -79,7 +79,8 @@
         
         /* This is basic - uses default settings */
         
-        $("a#single_image").fancybox();
+		$("a#single_image").fancybox();
+		$('.gallery-item a').fancybox();
         
         /* Using custom settings */
         

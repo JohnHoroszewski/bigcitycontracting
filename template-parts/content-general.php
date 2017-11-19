@@ -31,6 +31,13 @@
     <section class="page-content">
         <div class="constrain">
             <div class="content-wrapper">
+                
+                <?php if ( get_field( 'general_page_quote' ) ) : ?>
+
+                    <div class="page-quote"><?php the_field( 'general_page_quote' ); ?></div>
+
+                <?php endif; ?>
+
                 <?php the_content(); ?>
             </div>
         </div>

@@ -1029,12 +1029,13 @@ section {
   font-weight: 500;
 }
 
-.blog-quote {
+.blog-quote,
+.page-quote {
   font-size: 18px;
   font-style: italic;
   font-weight: 500;
   margin: 0 auto 30px auto;
-  max-width: 735px;
+  max-width: 960px;
   text-align: center;
 }
 
@@ -1221,38 +1222,6 @@ object {
   width: 100%;
 }
 
-.gallery-columns-2 .gallery-item {
-  max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-  max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-  max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
-}
-
 .gallery-caption {
   display: block;
 }
@@ -1295,6 +1264,11 @@ a.cta-btn.dark-btn,
   text-transform: uppercase;
 }
 
+.gallery-item figcaption {
+  margin: 0 auto;
+  max-width: 230px;
+}
+
 /*--------------------------------------------------------------
 ## Media Queries
 --------------------------------------------------------------*/
@@ -1335,6 +1309,11 @@ a.cta-btn.dark-btn,
   }
   .page-template-contact .contact-page-form span {
     width: 48%;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .gallery-columns-4 .gallery-item {
+    max-width: 50%;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1626,6 +1605,10 @@ a.cta-btn.dark-btn,
     padding: 50px 0;
   }
 
+  .gallery-columns-4 .gallery-item {
+    max-width: 33%;
+  }
+
   .hero {
     padding: 150px;
   }
@@ -1658,6 +1641,38 @@ a.cta-btn.dark-btn,
   }
 }
 @media only screen and (min-width: 1200px) {
+  .gallery-columns-2 .gallery-item {
+    max-width: 50%;
+  }
+
+  .gallery-columns-3 .gallery-item {
+    max-width: 33.33%;
+  }
+
+  .gallery-columns-4 .gallery-item {
+    max-width: 25%;
+  }
+
+  .gallery-columns-5 .gallery-item {
+    max-width: 20%;
+  }
+
+  .gallery-columns-6 .gallery-item {
+    max-width: 16.66%;
+  }
+
+  .gallery-columns-7 .gallery-item {
+    max-width: 14.28%;
+  }
+
+  .gallery-columns-8 .gallery-item {
+    max-width: 12.5%;
+  }
+
+  .gallery-columns-9 .gallery-item {
+    max-width: 11.11%;
+  }
+
   .hero {
     padding: 200px;
   }

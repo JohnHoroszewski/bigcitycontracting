@@ -50,6 +50,13 @@
     }
 }
 
+@media only screen and ( min-width: 640px ) {
+
+    .gallery-columns-4 .gallery-item {
+        max-width: 50%;
+    }
+}
+
 @media only screen and ( min-width: 768px ) {
 
     h1 {
@@ -60,6 +67,7 @@
     section {
         padding: 40px 0;
     }
+
 
     // Header
     .contact-links,
@@ -425,6 +433,12 @@
         padding: 50px 0;
     }
 
+    // Classes
+    
+    .gallery-columns-4 .gallery-item {
+        max-width: 33%;
+    }
+
     // Homepage
     .hero {
         padding: 150px ;
@@ -463,7 +477,40 @@
 }
 
 @media only screen and ( min-width: 1200px ) {
+  
+    // Classes
+    .gallery-columns-2 .gallery-item {
+        max-width: 50%;
+    }
     
+    .gallery-columns-3 .gallery-item {
+        max-width: 33.33%;
+    }
+    
+    .gallery-columns-4 .gallery-item {
+        max-width: 25%;
+    }
+    
+    .gallery-columns-5 .gallery-item {
+        max-width: 20%;
+    }
+    
+    .gallery-columns-6 .gallery-item {
+        max-width: 16.66%;
+    }
+    
+    .gallery-columns-7 .gallery-item {
+        max-width: 14.28%;
+    }
+    
+    .gallery-columns-8 .gallery-item {
+        max-width: 12.5%;
+    }
+    
+    .gallery-columns-9 .gallery-item {
+        max-width: 11.11%;
+    }    
+
     // Homepage
     .hero {
         padding: 200px ;
